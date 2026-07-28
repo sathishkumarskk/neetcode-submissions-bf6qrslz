@@ -1,0 +1,13 @@
+class Solution:
+    def isArraySpecial(self, nums: List[int]) -> bool:
+     i=0
+     j=1
+     if len(nums)==1:
+        return True
+     while j<len(nums):
+        if (nums[i]%2==0 and nums[j]%2==0) or (nums[i]%2!=0 and nums[j]%2!=0):
+            return False
+        i+=1
+        j+=1    
+     return True       
+        
