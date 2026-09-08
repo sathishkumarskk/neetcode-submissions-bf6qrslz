@@ -1,0 +1,12 @@
+class Solution(object):
+    def uncommonFromSentences(self, s1, s2):
+        main=[]
+        a=s1.split()
+        b=s2.split()
+        for i in a:
+            if i not in b and a.count(i)==1:
+                main.append(i)
+        for i in b:
+            if i not in a and b.count(i)==1:
+                main.append(i)      
+        return list(set(main))         
